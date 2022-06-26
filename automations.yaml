@@ -1,3 +1,5 @@
+---
+
 - id: update_config_github_push_event
   alias: Update Configuration on Github Push Event
 

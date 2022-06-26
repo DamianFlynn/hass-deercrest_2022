@@ -1,3 +1,4 @@
+---
 
 # Loads default set of integrations. Do not remove.
 default_config:
@@ -14,4 +15,4 @@ scene: !include scenes.yaml
 shell_command:
   # Pull in the latest configuration from Git
   update_config: cd /config && git pull
-  push_config: cd /config && git add -A :/ && git commit -m "config giles on `date + '%d-%m-%Y %H:%M:%S'`" && git push 
+  push_config: cd /config && git add -A :/ && git commit -m "config files on `date + '%d-%m-%Y %H:%M:%S'`" && git push
