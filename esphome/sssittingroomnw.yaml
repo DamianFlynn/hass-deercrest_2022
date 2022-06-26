@@ -1,0 +1,177 @@
+esphome:
+  name: sssittingroomnw
+  comment: Matel Garland (Gosund UP111)
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: "Deer Crest"
+  password: "W1res-G0ne!0k"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "${switch_id} Fallback"
+    password: "ZttZLtPiHEQB"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  reboot_timeout: 0s
+  password: "Prax1an!"
+
+ota:
+  password: "Prax1an!"
+
+web_server:
+  port: 80
+  auth:
+    username: admin
+    password: "Prax1an!"
+    
+time:
+  - platform: homeassistant
+
+substitutions:
+# Unique ID for Sensors.
+  switch_id: "sssittingroomnw"
+
+
+binary_sensor:
+
+# Push Button
+  - platform: gpio
+    id: ${switch_id}_switch1
+    internal: true
+    pin: GPIO3
+    name: " Switch 1"
+    filters:
+      - invert:
+    on_click:
+      min_length: 50ms
+      max_length: 350ms
+      then:
+        - switch.toggle: ${switch_id}_relay1
+
+# Template Sensor - Tracks Relay, Switches LED to Match (Internal Only)
+  - platform: template
+    name: "${switch_id} Template 1"
+    id: ${switch_id}_template1
+    internal: true
+    lambda: |-
+      if (id(${switch_id}_relay1).state) {
+        return true;
+      } else {
+        return false;
+      }
+    on_state:
+      - if:
+          condition:
+            - binary_sensor.is_on: ${switch_id}_template1
+          then:
+            - switch.turn_on: ${switch_id}_led_blue
+            - switch.turn_off: ${switch_id}_led_red
+      - if:
+          condition:
+            - binary_sensor.is_off: ${switch_id}_template1
+          then:
+            - switch.turn_off: ${switch_id}_led_blue  
+            - switch.turn_on: ${switch_id}_led_red
+
+button:
+# Restart Button in HA
+  - platform: restart
+    name: "${switch_id} Restart"
+
+switch:
+# Relay Output
+  - platform: gpio
+    pin: GPIO14
+    id: ${switch_id}_relay1
+    name: "${switch_id} Relay"
+
+# Blue LED Output
+  - platform: gpio
+    pin: GPIO1
+    internal: true
+    id: ${switch_id}_led_blue
+    inverted: yes
+    name: "${switch_id} Touch Status Led Blue"  
+
+# Red LED Output
+  - platform: gpio
+    pin: GPIO13
+    internal: true
+    id: ${switch_id}_led_red
+    inverted: True
+    name: "${switch_id} Touch Status Led Red"
+    restore_mode: ALWAYS_OFF
+
+#output:      
+## Red LED Output
+#  - platform: esp8266_pwm
+#    pin: GPIO13
+#    id: ${switch_id}_led_red
+#    inverted: True
+#
+#light:
+#  - platform: monochromatic
+#    name: "${switch_id} Red LED"
+#    internal: true
+#    output: ${switch_id}_led_red
+#    id: led_red
+
+sensor:
+  - platform: hlw8012
+    sel_pin:
+      number: GPIO12
+      inverted: True
+    cf_pin: GPIO04
+    cf1_pin: GPIO05
+    # Calibration
+    current_resistor: 0.0025 # Value of shunt resistor in ohms (higher value gives lower watt readout) 0.00221
+    voltage_divider: 880 # Resistance ratio of internal voltage divider resistors (lower value gives lower voltage readout) 871
+    current:
+      name: "${switch_id} Current"
+      unit_of_measurement: A
+      id: "energy_Amperage"
+    voltage:
+      name: "${switch_id} Voltage"
+      unit_of_measurement: V
+      id: "energy_Voltage"
+    power:
+      name: "${switch_id} Power"
+      unit_of_measurement: W
+      id: "energy_Wattage"
+    change_mode_every: 8
+    update_interval: 10s
+
+  - platform: total_daily_energy
+    name: "${switch_id} Total Daily Energy"
+    power_id: "energy_Wattage"
+    filters:
+        # Multiplication factor from W to kW is 0.001
+        - multiply: 0.001
+    unit_of_measurement: kWh
+    accuracy_decimals: 1   
+    
+  - platform: template
+    name: "${switch_id} Apparent Power"
+    unit_of_measurement: VA
+    lambda: return id(energy_Voltage).state * id(energy_Amperage).state;
+
+  - platform: template
+    name: "${switch_id} Power Factor"
+    lambda: return id(energy_Wattage).state / (id(energy_Voltage).state * id(energy_Amperage).state);
+
+# Extra sensor to keep track of plug uptime
+  - platform: uptime
+    name: ${switch_id} energy_temp_Uptime Sensor
+
+# Wifi Signal
+  - platform: wifi_signal
+    name: "${switch_id} WiFi Signal Sensor"
+    update_interval: 60s

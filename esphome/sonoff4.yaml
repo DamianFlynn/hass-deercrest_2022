@@ -1,0 +1,74 @@
+esphome:
+  name: smartfanswitch
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  ssid: "Deer Crest"
+  password: "W1res-G0ne!0k"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Smartswitch Fallback Hotspot"
+    password: "lY4YL7SqOToy"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: "Passw0rd!"
+
+ota:
+  password: "Passw0rd!"
+  
+web_server:
+  port: 80
+
+binary_sensor:
+  - platform: gpio
+    pin: GPIO4
+    name: "Fan Toggle Button"
+    on_press:
+      then:
+        - switch.toggle: Fan_ignition
+    
+switch:
+  - platform: gpio
+    pin: GPIO13   #D7
+    name: "IN1" 
+    id: IN1
+  - platform: gpio 
+    pin: GPIO12  #D6
+    name: "IN2"
+    id: IN2
+  - platform: gpio 
+    pin: GPIO14  #D5
+    name: "IN3" 
+    id: IN3
+    
+  - platform: template
+    name: "Fan_ignition"
+    id: Fan_ignition
+    turn_on_action:
+      - then:
+        - switch.turn_on: IN1
+        - delay: 2s
+        - switch.turn_on: IN2
+        - delay: 2s
+        - switch.turn_on: IN3
+        - switch.template.publish:
+            id: Fan_ignition
+            state: ON
+    turn_off_action:
+      - then:
+        - switch.turn_off: IN1
+        - delay: 1s
+        - switch.turn_off: IN2
+        - delay: 1s
+        - switch.turn_off: IN3
+        - switch.template.publish:
+            id: Fan_ignition
+            state: OFF  
