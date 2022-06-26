@@ -5,6 +5,27 @@
     "data": [
         {
             "state": {
+                "entity_id": "person.damian",
+                "state": "unknown",
+                "attributes": {
+                    "editable": false,
+                    "id": "damian",
+                    "user_id": "18ee21cbe8ca4ca6af21d175f95297c9",
+                    "friendly_name": "Damian"
+                },
+                "last_changed": "2022-06-26T15:58:05.522524+00:00",
+                "last_updated": "2022-06-26T15:58:09.387975+00:00",
+                "context": {
+                    "id": "01G6GBR4ZB5T9658MHK2BDX34V",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "extra_data": null,
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
+        },
+        {
+            "state": {
                 "entity_id": "update.home_assistant_supervisor_update",
                 "state": "off",
                 "attributes": {
@@ -20,16 +41,16 @@
                     "friendly_name": "Home Assistant Supervisor: Update",
                     "supported_features": 1
                 },
-                "last_changed": "2022-06-26T15:31:24.357757+00:00",
-                "last_updated": "2022-06-26T15:31:24.357757+00:00",
+                "last_changed": "2022-06-26T15:58:09.096232+00:00",
+                "last_updated": "2022-06-26T15:58:09.096232+00:00",
                 "context": {
-                    "id": "01G6GA75J59ZJYC3DAWJVJ8V9E",
+                    "id": "01G6GBR4P8121JBQJP3JHARWFS",
                     "parent_id": null,
                     "user_id": null
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-06-26T15:50:50.780122+00:00"
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
         },
         {
             "state": {
@@ -48,16 +69,16 @@
                     "friendly_name": "Home Assistant Core: Update",
                     "supported_features": 11
                 },
-                "last_changed": "2022-06-26T15:31:24.357982+00:00",
-                "last_updated": "2022-06-26T15:31:24.357982+00:00",
+                "last_changed": "2022-06-26T15:58:09.096448+00:00",
+                "last_updated": "2022-06-26T15:58:09.096448+00:00",
                 "context": {
-                    "id": "01G6GA75J5BA2S1H2S0VTPHGNT",
+                    "id": "01G6GBR4P819617EBAM47A4MWR",
                     "parent_id": null,
                     "user_id": null
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-06-26T15:50:50.780122+00:00"
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
         },
         {
             "state": {
@@ -76,16 +97,16 @@
                     "friendly_name": "Samba share: Update",
                     "supported_features": 25
                 },
-                "last_changed": "2022-06-26T15:31:24.358102+00:00",
-                "last_updated": "2022-06-26T15:31:24.358102+00:00",
+                "last_changed": "2022-06-26T15:58:09.096571+00:00",
+                "last_updated": "2022-06-26T15:58:09.096571+00:00",
                 "context": {
-                    "id": "01G6GA75J6DVR1V407WTBSBQSA",
+                    "id": "01G6GBR4P8WKDMEXS3EJZVWGV6",
                     "parent_id": null,
                     "user_id": null
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-06-26T15:50:50.780122+00:00"
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
         },
         {
             "state": {
@@ -104,16 +125,16 @@
                     "friendly_name": "Studio Code Server: Update",
                     "supported_features": 25
                 },
-                "last_changed": "2022-06-26T15:31:24.358199+00:00",
-                "last_updated": "2022-06-26T15:31:24.358199+00:00",
+                "last_changed": "2022-06-26T15:58:09.096704+00:00",
+                "last_updated": "2022-06-26T15:58:09.096704+00:00",
                 "context": {
-                    "id": "01G6GA75J60AA26DK8XD9EVCTB",
+                    "id": "01G6GBR4P81JQ5Q03QB7AN2NTD",
                     "parent_id": null,
                     "user_id": null
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-06-26T15:50:50.780122+00:00"
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
         },
         {
             "state": {
@@ -132,16 +153,16 @@
                     "friendly_name": "Mosquitto broker: Update",
                     "supported_features": 25
                 },
-                "last_changed": "2022-06-26T15:31:24.358295+00:00",
-                "last_updated": "2022-06-26T15:31:24.358295+00:00",
+                "last_changed": "2022-06-26T15:58:09.096801+00:00",
+                "last_updated": "2022-06-26T15:58:09.096801+00:00",
                 "context": {
-                    "id": "01G6GA75J62RCY11GWDV7VBSSG",
+                    "id": "01G6GBR4P8N6MHN00TPEGVK21P",
                     "parent_id": null,
                     "user_id": null
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-06-26T15:50:50.780122+00:00"
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
         },
         {
             "state": {
@@ -160,16 +181,16 @@
                     "friendly_name": "Terminal & SSH: Update",
                     "supported_features": 25
                 },
-                "last_changed": "2022-06-26T15:31:24.358388+00:00",
-                "last_updated": "2022-06-26T15:31:24.358388+00:00",
+                "last_changed": "2022-06-26T15:58:09.096892+00:00",
+                "last_updated": "2022-06-26T15:58:09.096892+00:00",
                 "context": {
-                    "id": "01G6GA75J6J1DSTFEK9T37V2ZS",
+                    "id": "01G6GBR4P8XGT0PVXHENDTG65X",
                     "parent_id": null,
                     "user_id": null
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-06-26T15:50:50.780122+00:00"
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
         },
         {
             "state": {
@@ -188,65 +209,16 @@
                     "friendly_name": "Fireboard 2 MQTT: Update",
                     "supported_features": 25
                 },
-                "last_changed": "2022-06-26T15:31:24.358473+00:00",
-                "last_updated": "2022-06-26T15:31:24.358473+00:00",
+                "last_changed": "2022-06-26T15:58:09.096974+00:00",
+                "last_updated": "2022-06-26T15:58:09.096974+00:00",
                 "context": {
-                    "id": "01G6GA75J6X7MDN0BWA6DV2KWR",
+                    "id": "01G6GBR4P81P71VW65Y087GHBR",
                     "parent_id": null,
                     "user_id": null
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-06-26T15:50:50.780122+00:00"
-        },
-        {
-            "state": {
-                "entity_id": "update.home_assistant_operating_system_update",
-                "state": "off",
-                "attributes": {
-                    "auto_update": false,
-                    "installed_version": "8.2",
-                    "in_progress": false,
-                    "latest_version": "8.2",
-                    "release_summary": null,
-                    "release_url": "https://github.com/home-assistant/operating-system/releases/tag/8.2",
-                    "skipped_version": null,
-                    "title": "Home Assistant Operating System",
-                    "entity_picture": "https://brands.home-assistant.io/homeassistant/icon.png",
-                    "friendly_name": "Home Assistant Operating System: Update",
-                    "supported_features": 3
-                },
-                "last_changed": "2022-06-26T15:31:24.358732+00:00",
-                "last_updated": "2022-06-26T15:31:24.358732+00:00",
-                "context": {
-                    "id": "01G6GA75J6B33ZQARAB5YG9X72",
-                    "parent_id": null,
-                    "user_id": null
-                }
-            },
-            "extra_data": null,
-            "last_seen": "2022-06-26T15:50:50.780122+00:00"
-        },
-        {
-            "state": {
-                "entity_id": "person.damian",
-                "state": "unknown",
-                "attributes": {
-                    "editable": false,
-                    "id": "damian",
-                    "user_id": "18ee21cbe8ca4ca6af21d175f95297c9",
-                    "friendly_name": "Damian"
-                },
-                "last_changed": "2022-06-26T14:51:28.589949+00:00",
-                "last_updated": "2022-06-26T14:51:28.589949+00:00",
-                "context": {
-                    "id": "01G6G7Y1YDQBHYPMJZNRJ6MHMQ",
-                    "parent_id": null,
-                    "user_id": null
-                }
-            },
-            "extra_data": null,
-            "last_seen": "2022-06-26T15:50:50.780122+00:00"
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
         },
         {
             "state": {
@@ -265,16 +237,66 @@
                     "friendly_name": "ESPHome: Update",
                     "supported_features": 25
                 },
-                "last_changed": "2022-06-26T15:31:24.358558+00:00",
-                "last_updated": "2022-06-26T15:31:24.358558+00:00",
+                "last_changed": "2022-06-26T15:58:09.097055+00:00",
+                "last_updated": "2022-06-26T15:58:09.097055+00:00",
                 "context": {
-                    "id": "01G6GA75J690EP8FS9NSV94DH7",
+                    "id": "01G6GBR4P92K9FGB9DTEF6HPYA",
                     "parent_id": null,
                     "user_id": null
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-06-26T15:50:50.780122+00:00"
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "update.home_assistant_operating_system_update",
+                "state": "off",
+                "attributes": {
+                    "auto_update": false,
+                    "installed_version": "8.2",
+                    "in_progress": false,
+                    "latest_version": "8.2",
+                    "release_summary": null,
+                    "release_url": "https://github.com/home-assistant/operating-system/releases/tag/8.2",
+                    "skipped_version": null,
+                    "title": "Home Assistant Operating System",
+                    "entity_picture": "https://brands.home-assistant.io/homeassistant/icon.png",
+                    "friendly_name": "Home Assistant Operating System: Update",
+                    "supported_features": 3
+                },
+                "last_changed": "2022-06-26T15:58:09.097204+00:00",
+                "last_updated": "2022-06-26T15:58:09.097204+00:00",
+                "context": {
+                    "id": "01G6GBR4P9H1XZV51CVBV7R3AK",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "extra_data": null,
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.update_configuration_on_github_push_event",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": null,
+                    "mode": "single",
+                    "current": 0,
+                    "id": "update_config_github_push_event",
+                    "friendly_name": "Update Configuration on Github Push Event"
+                },
+                "last_changed": "2022-06-26T15:58:09.197120+00:00",
+                "last_updated": "2022-06-26T15:58:09.197120+00:00",
+                "context": {
+                    "id": "01G6GBR4SDVK6G0DJRBZ16GKGW",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "extra_data": null,
+            "last_seen": "2022-06-26T20:43:09.410399+00:00"
         },
         {
             "state": {

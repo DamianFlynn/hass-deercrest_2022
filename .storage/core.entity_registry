@@ -1105,6 +1105,28 @@
                 "supported_features": 25,
                 "unique_id": "5c53de3b_esphome_version_latest",
                 "unit_of_measurement": null
+            },
+            {
+                "area_id": null,
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "automation.update_configuration_on_github_push_event",
+                "hidden_by": null,
+                "icon": null,
+                "id": "ce7bb05dfa6071747dfc8cb876b03fe2",
+                "name": null,
+                "options": {},
+                "original_device_class": null,
+                "original_icon": null,
+                "original_name": "Update Configuration on Github Push Event",
+                "platform": "automation",
+                "supported_features": 0,
+                "unique_id": "update_config_github_push_event",
+                "unit_of_measurement": null
             }
         ]
     }
