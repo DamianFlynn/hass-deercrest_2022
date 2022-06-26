@@ -1,0 +1,79 @@
+esphome:
+  name: esp_oiltank
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  ssid: "Deer Crest"
+  password: "W1res-G0ne!0k"
+
+# Enable logging
+logger:
+  level: DEBUG
+  
+# Enable Home Assistant API
+api:
+  password: "Prax1an!"
+
+ota:
+  password: "Prax1an!"
+
+
+substitutions:
+# Unique ID
+  esp_id: "esp_oil"
+  tank_length: "1845"
+  tank_width: "695"
+  depth_to_empty: "1200"
+  depth_to_full: "200"
+
+
+sensor:
+  - platform: ultrasonic
+    trigger_pin: D6
+    echo_pin: D5
+    pulse_time: 10us
+    name: "Oil Tank Depth"
+    unit_of_measurement: "mm"
+    id: ${esp_id}_depth
+    update_interval: 3s
+    accuracy_decimals: 2
+    filters:
+      - multiply: 1000
+      - sliding_window_moving_average:
+          window_size: 20
+          send_every: 20
+          send_first_at: 20
+
+    
+  - platform: template
+    name: "Oil Tank Level"
+    id: ${esp_id}_precent
+    accuracy_decimals: 0
+    unit_of_measurement: "%"
+    icon: "mdi:oil-level"
+    update_interval: 60s
+    lambda: 
+      return ((1-(( (float)id(${esp_id}_depth).state - (float)${depth_to_full} )/ (float)${depth_to_empty} )) * 100);
+
+
+  - platform: template
+    name: "Oil Tank Volume"
+    id: ${esp_id}_volume
+    accuracy_decimals: 1
+    unit_of_measurement: "l"
+    icon: "mdi:oil"
+    update_interval: 60s
+    lambda:  
+      return  (( (int)${tank_length} * (int)${tank_width} * ( (int)${depth_to_empty} - (int)id(${esp_id}_depth).state ) ) /1000 ) /1000;
+
+
+light:
+  - platform: neopixelbus
+    name: "Oil Tank Light"
+    id: ${esp_id}_light
+    type: GRB
+    method: BIT_BANG
+    default_transition_length: 0s
+    pin: D2
+    num_leds: 7

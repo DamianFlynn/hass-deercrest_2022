@@ -1,0 +1,74 @@
+esphome:
+  name: esp_hotwatertank
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  ssid: "Deer Crest"
+  password: "W1res-G0ne!0k"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "esp_hotwatertank Fallback"
+    password: "8899667711"
+
+
+captive_portal:
+
+# Enable logging
+logger:
+  level: DEBUG
+  
+# Enable Home Assistant API
+api:
+  password: "Prax1an!"
+
+ota:
+  password: "Prax1an!"
+
+# Enable Web server.
+web_server:
+  port: 80
+  
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+# Text sensors with general information.
+text_sensor:
+  # Expose ESPHome version as sensor.
+  - platform: version
+    name: esp_hotwatertank Version
+  # Expose WiFi information as sensors.
+  - platform: wifi_info
+    ip_address:
+      name: esp_hotwatertank IP
+    bssid:
+      name: esp_hotwatertank BSSID
+
+# Example configuration entry
+dallas:
+  - pin: D1
+  #GPIO05
+
+sensor:
+  - platform: dallas
+    address: 0x840417835E26FF28
+    name: "Stove Manifold Temp"
+
+  - platform: dallas
+    address: 0x8D031701C05EFF28
+    name: "Hot Tank Temp Center"
+    
+  - platform: dallas
+    address: 0x610517019751FF28
+    name: "Hot Tank Temp Bottom"
+
+  # Uptime sensor.
+  - platform: uptime
+    name: ESPHome Uptime
+
+  # WiFi Signal sensor.
+  - platform: wifi_signal
+    name: "WiFi Signal esp_hotwatertank"
+    update_interval: 60s
