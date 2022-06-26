@@ -1,0 +1,51 @@
+{
+    "version": "6",
+    "minor_version": 1,
+    "key": "hacs.hacs",
+    "data": {
+        "view": "Grid",
+        "compact": false,
+        "onboarding_done": false,
+        "archived_repositories": [
+            "estevez-dev/extended-banner-card",
+            "ppanagiotis/pymusiccast",
+            "Kraineff/philips-airpurifier",
+            "jensweimann/awb",
+            "briis/smartweather",
+            "KoljaWindeler/kaco",
+            "dr1rrb/ha-twinkly",
+            "heinoldenhuis/home_assistant_omnik_solar",
+            "DSorlov/hasl-platform",
+            "iantrich/aftership-card",
+            "nagyrobi/home-assistant-custom-components-pfsense-gateways",
+            "pippyn/Home-Assistant-Sensor-Groningen-Afvalwijzer",
+            "custom-cards/upcoming-media-card",
+            "maykar/lovelace-swipe-navigation",
+            "maykar/kiosk-mode",
+            "maykar/plex_assistant",
+            "custom-components/sensor.plex_recently_added",
+            "custom-components/sensor.radarr_upcoming_media",
+            "custom-components/sensor.sonarr_upcoming_media",
+            "custom-components/wienerlinien",
+            "GeorgeSG/lovelace-folder-card",
+            "KTibow/lovelace-dark-soft-ui-theme",
+            "KTibow/lovelace-light-soft-ui-theme",
+            "DCSBL/ha-homewizard-energy"
+        ],
+        "renamed_repositories": {
+            "PepegaBruh/CryptoTracker": "BigNocciolino/CryptoTracker",
+            "9a4gl/hass-peltec": "9a4gl/hass-centrometal-boiler",
+            "78wesley/Darkish-Theme": "78wesley/Home-Assistant-Darkish-Theme",
+            "KartoffelToby/ai_thermostat": "KartoffelToby/better_thermostat",
+            "nbogojevic/homeassistant-midea-dehumidifier-lan": "nbogojevic/homeassistant-midea-air-appliances-lan",
+            "nikrolls/homeassistant-goldair-climate": "nicole-ashley/homeassistant-goldair-climate",
+            "rj175/home-assistant-aws-codepipeline": "ohheyrj/home-assistant-aws-codepipeline",
+            "DarkSir23/sensor.mylar": "WillowMist/sensor.mylar",
+            "ulic75/power-distribution-card": "ulic75/power-flow-card",
+            "wills106/homsassistant-solax-modbus": "wills106/homeassistant-solax-modbus",
+            "dmitry-k/yandex_smart_home": "dext0r/yandex_smart_home",
+            "uvjustin/alarmdotcom": "pyalarmdotcom/alarmdotcom"
+        },
+        "ignored_repositories": []
+    }
+}

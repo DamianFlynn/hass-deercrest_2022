@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<aircast>
+<common>
+<enabled>1</enabled>
+<stop_receiver>0</stop_receiver>
+<media_volume>1.0000</media_volume>
+<latency></latency>
+<codec>flac</codec>
+<artwork></artwork>
+<drift>0</drift>
+<metadata>1</metadata>
+<flush>1</flush>
+</common>
+<main_log>info</main_log>
+<cast_log>info</cast_log>
+<util_log>warn</util_log>
+<log_limit>-1</log_limit>
+<max_players>32</max_players>
+<ports>0:0</ports>
+<binding>?</binding>
+<device>
+<udn>4bca98f0e46689cd9001fb0d38ed28a1</udn>
+<name>Living Room TV+</name>
+<mac>cc:cc:f9:ff:57:2b</mac>
+<enabled>1</enabled>
+</device>
+<device>
+<udn>4f57945d196cdc4880c5cb01f1806063</udn>
+<name>Kitchen Smart Display+</name>
+<mac>cc:cc:7b:85:b6:4e</mac>
+<enabled>1</enabled>
+</device>
+<device>
+<udn>33de20bbd14418f19e33d7c0c3ef8486</udn>
+<name>Cinema Screen+</name>
+<mac>cc:cc:24:0a:39:ac</mac>
+<enabled>1</enabled>
+</device>
+<device>
+<udn>4ceb573f89174d2140823cb2b34cbeaf</udn>
+<name>Laundry Room+</name>
+<mac>cc:cc:2e:61:c3:42</mac>
+<enabled>1</enabled>
+</device>
+</aircast>

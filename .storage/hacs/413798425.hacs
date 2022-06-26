@@ -1,0 +1,59 @@
+{
+    "version": "6",
+    "minor_version": 1,
+    "key": "hacs/413798425.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@stokkie90"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [],
+        "config_flow": true,
+        "default_branch": "main",
+        "description": "UI-Lovelace-Minimalist is a \"theme\" for HomeAssistant",
+        "domain": "ui_lovelace_minimalist",
+        "domains": [],
+        "downloads": 2125,
+        "etag_repository": "W/\"906c014f4b72b73930721174ebf37c1d64fdcb8212c96d8defe8e128ecbefe9d\"",
+        "file_name": "",
+        "filename": "ui_lovelace_minimalist.zip",
+        "first_install": false,
+        "fork": false,
+        "full_name": "UI-Lovelace-Minimalist/UI",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": "2021.5.0",
+        "id": "413798425",
+        "iot_class": null,
+        "installed": true,
+        "installed_commit": "1666181",
+        "installed_version": "v0.0.8",
+        "open_issues": 78,
+        "last_commit": "416e047",
+        "last_version": "v1.0.1",
+        "last_updated": "2022-06-26T10:49:38Z",
+        "manifest_name": "UI Lovelace Minimalist",
+        "new": false,
+        "persistent_directory": null,
+        "pushed_at": "2022-06-26T10:49:38",
+        "releases": true,
+        "render_readme": true,
+        "published_tags": [
+            "v1.0.1",
+            "v0.0.9",
+            "v0.0.8",
+            "v0.0.7-hotfix2",
+            "v0.0.7-hotfix1"
+        ],
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 748,
+        "topics": [
+            "home-assistant"
+        ],
+        "zip_release": true
+    }
+}
