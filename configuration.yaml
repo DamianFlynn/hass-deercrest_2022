@@ -9,3 +9,9 @@ tts:
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+# Shell Commands
+shell_command:
+  # Pull in the latest configuration from Git
+  update_config: cd /config && git pull
+  push_config: cd /config && git add -A :/ && git commit -m "config giles on `date + '%d-%m-%Y %H:%M:%S'`" && git push 
